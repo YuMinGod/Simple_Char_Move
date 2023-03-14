@@ -15,14 +15,14 @@ def main_proc():
     global cx, cy
     if key == "Up":
         cy = cy - 20
-    if key == "Down":
+    elif key == "Down":
         cy = cy + 20
-    if key == "Left":
+    elif key == "Left":
         cx = cx - 20
-    if key == "Right":
+    elif key == "Right":
         cx = cx + 20
     canvas.coords("Bazzi", cx, cy)
-    root.after(100, main_proc)
+    root.after(10, main_proc)
 
 root = tkinter.Tk()
 root.title("Test")
